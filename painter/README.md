@@ -38,8 +38,9 @@ Painter 是一个小型的画板图层，类似“刮刮卡”写出文字，底
 ```
 
 ###index.js
-\*初始化画板\*
+
 ```
+//初始化画板
 var painter = new Painter({
 	layer: 'mask',	//蒙层的id名称
 	cancelButton: 'btn-cancel',	//取消按钮的id名称（必选）
@@ -59,7 +60,7 @@ var removeClass = function(sel) {
 	}
 };
 
-\*点击改变笔触大小\*
+//点击改变笔触大小
 penwrap.addEventListener('click', function(e) {
 	var sel = e.target;
 	if(e.target && sel.nodeName.toUpperCase() == "LI") {
