@@ -28,6 +28,7 @@ h1 {
 	height: 7rem;
 	overflow: hidden;
 }
+
 .btn {
 	width: 10%;
 	height: 3.5rem;
@@ -35,14 +36,17 @@ h1 {
 	float: left;
 	cursor: pointer;
 }
+
 .btn-cancel {
 	background: url(../images/cancle.png) no-repeat;
 	background-size: contain;
 }
+
 .btn-clear {
 	background: url(../images/clear.png) no-repeat;
 	background-size: contain;
 }
+
 .pen-choose { background-color: #9cc; }
 
 ul {
@@ -67,18 +71,22 @@ li:nth-child(1) {
 	width: 2rem;
 	height: 2rem;
 }
+
 li:nth-child(2) {
 	width: 2.5rem;
 	height: 2.5rem;
 }
+
 li:nth-child(3) {
 	width: 3rem;
 	height: 3rem;
 }
+
 li:nth-child(4) {
 	width: 3.5rem;
 	height: 3.5rem;
 }
+
 li:nth-child(5) {
 	width: 4rem;
 	height: 4rem;
