@@ -1,9 +1,9 @@
 # painter plugin # painter 中文文档
-Painter 是一个小型的画板图层，类似“刮刮卡”写出文字，底图是自己的图片，可选择画笔的粗细，以及蒙层的颜色,可撤销清除画板
+Painter 是一个小型的画板图层，类似“刮刮卡”写出文字，底图是自己的图片，可选择画笔的粗细，以及蒙层的颜色，具有撤销清除画板的功能。
 
 <img src="images/result.png">
 
-方法说明：
+>方法说明：
 setPenWidth(n)	//n为数字，如10，可在后来调节笔触的大小
 var painter = new Painter({
 	layer: 'mask',	//蒙层的id名称
@@ -19,7 +19,7 @@ var painter = new Painter({
 实例说明：
 
 /*HTML*/
-
+```
 <canvas id="mask" class="mask" width="700" height="400"></canvas>
 <div class="tool-wrap">
 	<div id="btn-cancel" class="btn-cancel btn"></div>
@@ -34,9 +34,11 @@ var painter = new Painter({
 </div>
 
 <h1>hello painter</h1>
+```
 
 /*index.js*/
 //初始化画板
+```
 var painter = new Painter({
 	layer: 'mask',	//蒙层的id名称
 	cancelButton: 'btn-cancel',	//取消按钮的id名称（必选）
@@ -65,3 +67,4 @@ penwrap.addEventListener('click', function(e) {
 
 	}
 });
+```
