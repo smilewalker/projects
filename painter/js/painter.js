@@ -5,6 +5,14 @@ var Painter = function(info) {
 
 Painter.prototype = {
 
+	initData: function() {
+		this.lastX = 0;
+		this.lastY = 0;
+		this.isPaint = false;
+		this.history = [];
+		this.count = 0;
+	},
+
 	setConfig: function() {
 		this.config = {
 			lineWidth: this.info.lineWidth || 5,
@@ -17,21 +25,13 @@ Painter.prototype = {
 		};
 	},
 
-	initData: function() {
-		this.lastX = 0;
-		this.lastY = 0;
-		this.isPaint = false;
-		this.history = [];
-		this.count = 0;
-	},
-
 	setWH: function() {
 		this.cva.setAttribute('width', this.config.boardW);
 		this.cva.setAttribute('height', this.config.boardH);
 	},
-	
-	setLayer: function(color) {
-		this.ctx.fillStyle = color;
+
+	setLayer: function() {
+		this.ctx.fillStyle = this.config.layerBg;
 		this.ctx.fillRect(0, 0, this.config.boardW, this.config.boardH);
 		this.ctx.globalCompositeOperation = "destination-out";
 	},
@@ -117,6 +117,10 @@ Painter.prototype = {
 		this.initData();
 	},
 
+	// resetPaint: function() {
+	// 	this.ctx.clearRect(0, 0, this.config.boardW, this.config.boardH);
+	// },
+
 	bind: function(obj, handler) {
 		return function() {
 			return handler.apply(obj, arguments);
@@ -132,7 +136,7 @@ Painter.prototype = {
 		this.initData();
 		this.setConfig();
 		this.setWH();
-		this.setLayer(this.config.layerBg);
+		this.setLayer();
 		this.setPen();
 		this.setPenWidth();
 		this.cancelPaint(this.cancleBtn);

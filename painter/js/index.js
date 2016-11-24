@@ -1,5 +1,5 @@
 
-var painterFunc = new Painter({
+var painter = new Painter({
 	layer: 'mask',
 	cancelButton: 'btn-cancel',
 	clearButton: 'btn-clear',
@@ -22,7 +22,7 @@ penwrap.addEventListener('click', function(e) {
 	var sel = e.target;
 	if(e.target && sel.nodeName.toUpperCase() == "LI") {
 		removeClass(penwrap.getElementsByTagName('li'));
-		painterFunc.setPenWidth(sel.dataset.linewidth);
+		painter.setPenWidth(sel.dataset.linewidth);
 		sel.className += "pen-choose";
 
 	}
