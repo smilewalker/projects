@@ -13,7 +13,7 @@ var ImgHandle = function() {};
 
 ImgHandle.prototype = {
 
-	QNURL: location.protocol + '//www.in66.com/promo/commonapi/qiniutoken',
+	QNURL: "自己或公司的七牛云地址",
 	
 	/**
   * 上传base至七牛云存储
